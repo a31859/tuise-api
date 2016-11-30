@@ -1,0 +1,36 @@
+get:
+  summary: Traffic data from a destination
+  description: |
+    The traffic endpoint returns information about the trafic at a given location. ]]
+  parameters:
+    - name: latitude
+      in: query
+      description: Latitude component of location.
+      required: true
+      type: number
+      format: double
+    - name: longitude
+      in: query
+      description: Longitude component of location.
+      required: true
+      type: number
+      format: double
+    - name: radius
+      in: query
+      description: Radius in km from location
+      required: true
+      type: number
+      format: float
+  tags:
+    - Products
+  responses:
+    200:
+      description: An array of traffic incidents
+      schema:
+        type: array
+        items:
+          $ref: '#/definitions/TrafficIncident'
+    default:
+      description: Unexpected error
+      schema:
+        $ref: '#/definitions/Error'

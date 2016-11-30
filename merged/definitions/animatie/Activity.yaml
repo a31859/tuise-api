@@ -1,0 +1,35 @@
+type: object
+properties:
+  id:
+    type: integer
+    format: int32
+    description: bla
+  name:
+    type: string
+    description: bla
+  description:
+    type: string
+    description: bla
+  startdatetime:
+    type: string
+    format: date-time
+    description: bla
+  enddatetime:
+    type: string
+    format: date-time
+    description: bla
+  type:
+    type: string
+    description: type of activity
+  capacity:
+    type: integer
+    format: int32
+    description: bla
+  booked:
+    type: integer
+    format: int32
+    description: bla
+  free:
+    type: integer
+    format: int32
+    description: bla

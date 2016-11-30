@@ -1,0 +1,58 @@
+get:
+  tags:
+    - excursion
+  security:
+   - basicAuth: []
+  description: |
+    Lists `Excursion` objects limited by region. Availability is checked if a start & end date are provided.
+  responses:
+    200:
+      description: Successful response
+      schema:
+        type: array
+        items:
+          $ref: '#/definitions/Excursion'
+    403:
+      description: Unauthorised response
+      schema:
+        type: string
+        description: Not Authourised to access this endpoint or resource.
+  parameters:
+    - name: Accept-Language
+      description: 'Locale'
+      in: header
+      type: string
+    - name: region
+      in: path
+      description: '`Location` code for the region'
+      required: true
+      type: string
+    - name: limit
+      description: 'limit the list of excursions'
+      in: query
+      required: true
+      type: number
+      format: integer
+    - name: offset
+      description: 'offset the list of excursions'
+      in: query
+      required: true
+      type: number
+      format: integer
+    - name: codes
+      description: 'comma seperated list of hotels'
+      in: query
+      required: false
+      type: string
+    - name: startdate
+      in: query
+      description: 'start date (will trigger availability)'
+      required: false
+      type: string
+      format: date
+    - name: enddate
+      in: query
+      description: 'end date, (will trigger availability)'
+      required: false
+      type: string
+      format: date

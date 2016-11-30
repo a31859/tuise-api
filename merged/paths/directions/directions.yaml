@@ -1,0 +1,37 @@
+get:
+  summary: Directions
+  description: |
+    The directions endpoint returns information
+    based on a given start an end location.
+  parameters:
+    - name: Start-point
+      in: query
+      description: Start point .
+      required: true
+      type: string
+      format: string
+    - name: End-point
+      in: query
+      description: End point.
+      required: true
+      type: string
+      format: string
+    - name: Mode
+      in: query
+      description: Travel mode .
+      required: true
+      type: integer
+      format: integer
+  tags:
+    - Directions
+  responses:
+    200:
+      description: An array of directions
+      schema:
+        type: array
+        items:
+          $ref: '#/definitions/Route'
+    default:
+      description: Unexpected error
+      schema:
+        $ref: '#/definitions/Error'

@@ -1,0 +1,26 @@
+get:
+  summary: get FAQ topics
+  description: |
+    Get all FAQ topic
+  tags:
+    - FAQ
+    - Topic
+  responses:
+    200:
+      description: An array of topics
+      schema:
+        type: array
+        items:
+          $ref: '#/definitions/Topic'
+    201:
+      description: succesfully created a topic
+      schema:
+        $ref: '#/definitions/Create'
+    404:
+      description: Topic not found
+      schema:
+        $ref: '#/definitions/ResourceNotFound'
+    default:
+      description: Unexpected Error
+      schema:
+        $ref: '#/definitions/Error'

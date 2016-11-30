@@ -1,0 +1,9 @@
+type: object
+properties:
+  language:
+    type: string
+    description: Tye ISO language code of the spoken language
+  audio:
+    type: string
+    format: byte
+    description: The binary audio data

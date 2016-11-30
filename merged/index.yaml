@@ -1,0 +1,26 @@
+swagger: '2.0'
+info:
+  title: TUIse
+  description: A bot designed by TUI HackFridays
+  version: "1.0.0"
+host: api.tuise.eu
+# array of all schemes that your API supports
+schemes:
+  - http
+  - https
+# will be prefixed to all paths
+basePath: /v1
+consumes:
+  - application/json
+  - application/x-www-form-urlencoded
+produces:
+  - application/json
+  - application/xml
+securityDefinitions:
+  basicAuth:
+    type: basic
+    description: HTTP Basic Authentication. Works over `HTTP` and `HTTPS`
+definitions:
+  $ref: ./definitions/index.yaml
+paths:
+  $ref: ./paths/index.yaml

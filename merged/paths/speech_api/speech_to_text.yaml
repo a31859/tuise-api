@@ -1,0 +1,22 @@
+post:
+  summary: Transform spoken audio to text
+  parameters:
+    - name: speech
+      required: true
+      in: body
+      description: The speech object to translate to text
+      schema:
+        $ref: '#/definitions/SpeechInput'
+  tags:
+    - speech
+  responses:
+    200:
+      description: An array of products
+      schema:
+        type: array
+        items:
+          $ref: '#/definitions/RecognizedSpeech'
+    default:
+      description: Unexpected error
+      schema:
+        $ref: '#/definitions/Error'

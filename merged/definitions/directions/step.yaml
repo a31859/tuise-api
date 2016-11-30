@@ -1,0 +1,14 @@
+type: object
+properties:
+  step_id:
+    type: string
+    description: Unique identifier of step.
+  steptime:
+    type: string
+    description: display time of step
+  stepdistance:
+    type: string
+    description: Display distance of step.
+  street:
+    type: string
+    description: display name of street

@@ -1,0 +1,40 @@
+get:
+  tags:
+    - location
+  security:
+   - basicAuth: []
+  description: |
+    `Location` object (type Region) with child cities and possible grandchild generic locations.
+     Between each level of specified type `Location` objects it's possible that there are multiple generic `Location` objects.
+  responses:
+    200:
+      description: Successful response
+      schema:
+        type: array
+        items:
+          $ref: '#/definitions/Location'
+    403:
+      description: Unauthorised response
+      schema:
+        type: string
+        description: Not Authourised to access this endpoint or resource.
+  parameters:
+    - name: Accept-Language
+      description: 'Locale'
+      in: header
+      type: string
+    - name: continent
+      in: path
+      description: '`Location` code for the continent'
+      required: true
+      type: string
+    - name: country
+      in: path
+      description: '`Location` code for the country'
+      required: true
+      type: string
+    - name: region
+      in: path
+      description: '`Location` code for the region'
+      required: true
+      type: string

@@ -1,0 +1,14 @@
+type: object
+required:
+  - paxs
+properties:
+  paxs:
+    type: array
+    items:
+      $ref: '#/definitions/Pax'
+    description: 'Pax for reservation.'
+  excursions:
+    type: array
+    items:
+      $ref: '#/definitions/Excursion'
+    description: 'Excursions for reservation.'

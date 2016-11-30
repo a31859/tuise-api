@@ -1,0 +1,17 @@
+type: object
+required:
+  - title
+properties:
+  title:
+    type: string
+    description: 'Pax title.'
+  name:
+    type: string
+    description: 'Pax name.'
+  firstname:
+    type: string
+    description: 'Pax firstname'
+  birthdate:
+    type: string
+    format: date
+    description: 'Pax birthdate'

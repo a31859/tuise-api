@@ -1,0 +1,21 @@
+post:
+  summary: place an order
+  description: place an order
+  parameters:
+    - in: body
+      name: body
+      description: book an animation
+      required: false
+      schema:
+        $ref: "#/definitions/Order"
+  responses:
+    200:
+      description: Successful operation
+      schema:
+        type: array
+        items:
+          $ref: '#/definitions/Activity'
+    default:
+      description: Unexpected error
+      schema:
+        $ref: '#/definitions/Error'

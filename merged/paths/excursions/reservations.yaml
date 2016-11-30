@@ -1,0 +1,94 @@
+get:
+  tags:
+    - excursion
+    - reservation
+  security:
+   - basicAuth: []
+  description: |
+    Get Rservation price object.
+  responses:
+    200:
+      description: Successful response
+      schema:
+        type: array
+        items:
+          $ref: '#/definitions/Reservation'
+    403:
+      description: Unauthorised response
+      schema:
+        type: string
+        description: Not Authourised to access this endpoint or resource.
+  parameters:
+    - name: Accept-Language
+      description: 'Locale'
+      in: header
+      type: string
+    - name: reservation
+      in: body
+      description: Created reservation object
+      required: true
+      schema:
+        $ref: "#/definitions/Reservation"
+
+post:
+  tags:
+    - excursion
+    - reservation
+  security:
+   - basicAuth: []
+  description: |
+    Book Reservation object.
+  responses:
+    200:
+      description: Successful response
+      schema:
+        type: array
+        items:
+          $ref: '#/definitions/Reservation'
+    403:
+      description: Unauthorised response
+      schema:
+        type: string
+        description: Not Authourised to access this endpoint or resource.
+  parameters:
+    - name: Accept-Language
+      description: 'Locale'
+      in: header
+      type: string
+    - name: reservation
+      in: body
+      description: Created reservation object
+      required: true
+      schema:
+        $ref: "#/definitions/Reservation"
+put:
+  tags:
+    - excursion
+    - reservation
+  security:
+   - basicAuth: []
+  description: |
+    Amend Reservation object.
+  responses:
+    200:
+      description: Successful response
+      schema:
+        type: array
+        items:
+          $ref: '#/definitions/Reservation'
+    403:
+      description: Unauthorised response
+      schema:
+        type: string
+        description: Not Authourised to access this endpoint or resource.
+  parameters:
+    - name: Accept-Language
+      description: 'Locale'
+      in: header
+      type: string
+    - name: reservation
+      in: body
+      description: Created reservation object
+      required: true
+      schema:
+        $ref: "#/definitions/Reservation"

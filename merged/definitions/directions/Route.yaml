@@ -1,0 +1,19 @@
+type: object
+properties:
+  route_id:
+    type: string
+    description: Unique identifier.
+  description:
+    type: string
+    description: Description of product.
+  time:
+    type: number
+    description: Display travel time.
+  distance:
+    type: integer
+    description: Description of distance.
+  steps:
+    type: array
+    description: list of steps
+    items:
+      $ref: '#/definitions/step'

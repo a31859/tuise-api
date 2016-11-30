@@ -1,0 +1,12 @@
+type: object
+properties:
+  id:
+    type: integer
+    format: int32
+  question:
+    type: string
+  answer:
+    type: string
+  helpful:
+    type: integer
+    format: int32

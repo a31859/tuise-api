@@ -1,0 +1,16 @@
+put:
+  parameters:
+    - name: translation
+      in: body
+      description: The translation JSON you want to post
+      schema:
+        $ref: '#/definitions/Translation'
+      required: true
+  responses:
+    200:
+      description: Updates the translation
+    500:
+      description: Application error
+      schema:
+        title: You have an error in your application
+        type: string

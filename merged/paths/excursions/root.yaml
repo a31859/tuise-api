@@ -1,0 +1,6 @@
+get:
+  security:
+   - basicAuth: []
+  responses:
+    200:
+      description:  Will send `Authenticated` if authentication is succesful, otherwise it will send `Unauthorized`

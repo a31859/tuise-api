@@ -1,0 +1,43 @@
+type: object
+properties:
+  code:
+    type: integer
+    description: unique code that identifies the excursion
+  name:
+    type: string
+    description: name of the execursion
+  summary:
+    type: string
+    description: a summary text describing the excursion
+  type:
+    type: string
+    description: type of the excursion
+  coordinates:
+    type: array
+    items:
+      type: array
+      items:
+        type: number
+        format: float
+      description: coordinates of the excursion.
+  location:
+    $ref: '#/definitions/Location'
+  startDateValid:
+    type: string
+    format: date
+    description: start date when the excursion becomes available to receive reservations
+  endDateValid:
+    type: string
+    format: date
+    description: end date when the excursion becomes unavailable for reservations
+  classification:
+    type: string
+    description: the classification for the excursion
+  uniqueSellingPoints:
+    type: array
+    items:
+      type: string
+  images:
+    type: array
+    items:
+      $ref: '#/definitions/Image'

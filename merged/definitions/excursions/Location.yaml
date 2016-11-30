@@ -1,0 +1,45 @@
+type: object
+properties:
+  code:
+    type: string
+    description: Location code.
+  name:
+    type: string
+    description: Location name.
+  type:
+    type: string
+    description: Type of location, possible values = ['City', 'Region', 'Country', 'Continent', ''].
+  generic:
+    type: boolean
+    description: Is the location generic?
+  description:
+    type: string
+    description: Description of the location.
+  coordinates:
+    type: array
+    items:
+      type: array
+      items:
+        type: number
+        format: float
+      description: Coordinates of the location.
+  images:
+    type: array
+    items:
+      type: string
+    description: Array of links to images of a location.
+  parentLocation:
+    $ref: '#/definitions/Location'
+  childLocations:
+    type: array
+    items:
+      $ref: '#/definitions/Location'
+    description: Child locations of the current location.
+  info:
+    type: string
+    description: Information about the location.
+  nearby:
+    type: array
+    items:
+      type: string
+    description: List of nearby stuff of this location.

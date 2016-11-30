@@ -1,0 +1,20 @@
+get:
+  tags:
+    - location
+    - reference
+  security:
+   - basicAuth: []
+  description: |
+    List of  `Locations` (continents with child countries).
+  responses:
+    200:
+      description: Successful response
+      schema:
+        type: array
+        items:
+          $ref: '#/definitions/Location'
+    403:
+      description: Unauthorised response
+      schema:
+        type: string
+        description: Not Authourised to access this endpoint or resource.

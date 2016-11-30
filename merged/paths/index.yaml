@@ -1,0 +1,46 @@
+/entertainment/overview:
+  $ref: ./animatie/entertainment_overview.yaml
+/entertainment/order:
+  $ref: ./animatie/entertainment_order.yaml
+/directions:
+  $ref: ./directions/directions.yaml
+/:
+  $ref: ./excursions/root.yaml
+/excursions:
+  $ref: ./excursions/excursions.yaml
+/excursions/{region}:
+  $ref: ./excursions/excursions_region.yaml
+/excursions/{region}/{city}:
+  $ref: ./excursions/excursions_region_city.yaml
+/excursions/code/{code}:
+  $ref: ./excursions/excursions_code_code.yaml
+/locations:
+  $ref: ./excursions/locations.yaml
+/locations/{continent}:
+  $ref: ./excursions/locations_continent.yaml
+/locations/{continent}/{country}:
+  $ref: ./excursions/locations_continent_country.yaml
+/locations/{continent}/{country}/{region}:
+  $ref: ./excursions/locations_continent_country_region.yaml
+/locations/{continent}/{country}/{region}/{city}:
+  $ref: ./excursions/locations_continent_country_region_city.yaml
+/reservations:
+  $ref: ./excursions/reservations.yaml
+/topics/{id}:
+  $ref: ./faq/topics_id.yaml
+/topics:
+  $ref: ./faq/topics.yaml
+/questions:
+  $ref: ./faq/questions.yaml
+/questions/{id}:
+  $ref: ./faq/questions_id.yaml
+/speech-to-text:
+  $ref: ./speech_api/speech_to_text.yaml
+/traffic/incidents/area:
+  $ref: ./traffic/traffic_incidents_area.yaml
+/translation:
+  $ref: ./translation/root.yaml
+/translation/fill:
+  $ref: ./translation/fill.yaml
+/weather:
+  $ref: ./weather/weather.yaml

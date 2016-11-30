@@ -1,0 +1,44 @@
+Activity:
+  $ref: ./animatie/Activity.yaml
+Order:
+  $ref: ./animatie/Order.yaml
+step:
+  $ref: ./directions/step.yaml
+Route:
+  $ref: ./directions/Route.yaml
+Location:
+  $ref: ./excursions/Location.yaml
+Image:
+  $ref: ./excursions/Image.yaml
+Excursion:
+  $ref: ./excursions/Excursion.yaml
+Reservation:
+  $ref: ./excursions/Reservation.yaml
+Pax:
+  $ref: ./excursions/Pax.yaml
+Topic:
+  $ref: ./faq/Topic.yaml
+FAQ:
+  $ref: ./faq/FAQ.yaml
+Question:
+  $ref: ./faq/Question.yaml
+Questions:
+  $ref: ./faq/Questions.yaml
+ResourceNotFound:
+  $ref: ./faq/ResourceNotFound.yaml
+Create:
+  $ref: ./faq/Create.yaml
+SpeechInput:
+  $ref: ./speech_api/SpeechInput.yaml
+RecognizedSpeech:
+  $ref: ./speech_api/RecognizedSpeech.yaml
+LocationCoords:
+  $ref: ./traffic/Location.yaml
+TrafficIncident:
+  $ref: ./traffic/TrafficIncident.yaml
+Translation:
+  $ref: ./translation/Translation.yaml
+Weather:
+  $ref: ./weather/Weather.yaml
+Error:
+  $ref: ./Error.yaml

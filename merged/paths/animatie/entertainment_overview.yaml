@@ -1,0 +1,25 @@
+get:
+  summary: overview entertainments
+  description: get an overview of the available entertainment activities.
+  parameters:
+    - name: datetime
+      in: query
+      description: for when do you want to see the entertainment things
+      required: true
+      type: string
+    - name: activityType
+      in: query
+      description: for when do you want to see the entertainment things
+      required: false
+      type: string
+  responses:
+    200:
+      description: An array of activities
+      schema:
+        type: array
+        items:
+          $ref: '#/definitions/Activity'
+    default:
+      description: Unexpected error
+      schema:
+        $ref: '#/definitions/Error'

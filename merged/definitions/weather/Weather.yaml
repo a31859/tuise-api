@@ -1,0 +1,13 @@
+type: object
+properties:
+  degrees:
+    type: number
+    format: double
+  weatherState:
+    type: string
+  humidity:
+    type: number
+    format: double
+  icon:
+    type: string
+    format: byte

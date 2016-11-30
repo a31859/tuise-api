@@ -1,0 +1,47 @@
+get:
+  summary: FAQ topics
+  description: |
+    Get a specific FAQ topic
+  parameters:
+    - name: id
+      in: path
+      description: Get a topic by id
+      type: integer
+      format: int32
+      required: true
+  tags:
+    - FAQ
+    - Topic
+  responses:
+    200:
+      description: A FAQ topic
+      schema:
+          $ref: '#/definitions/Topic'
+    404:
+      description: Topic not found
+      schema:
+        $ref: '#/definitions/ResourceNotFound'
+    default:
+      description: Unexpected Error
+      schema:
+        $ref: '#/definitions/Error'
+post:
+  summary: add a new topic
+  description: create a new topic
+  parameters:
+    - name: id
+      in: path
+      type: integer
+      format: int32
+      required: true
+    - name: body
+      in: body
+      description: topic
+      schema:
+        $ref: '#/definitions/Topic'
+      required: true
+  responses:
+    201:
+      description: created topic
+      schema:
+        $ref: '#/definitions/Topic'

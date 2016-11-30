@@ -1,0 +1,22 @@
+get:
+  summary: Frequently Asked Questions
+  description: |
+    The questions endpoint returns all the frequently asked questions for given topic
+  parameters:
+    - name: topic
+      in: query
+      description: topic id you want to receive the questions for
+      required: true
+      type: integer
+      format: int32
+  tags:
+    - Products
+  responses:
+    200:
+      description: An array of questions
+      schema:
+          $ref: '#/definitions/Questions'
+    default:
+      description: Unexpected error
+      schema:
+        $ref: '#/definitions/Error'

@@ -1,0 +1,8 @@
+type: object
+properties:
+  sentence:
+    type: string
+    description: The recognized spoken sentence
+  language:
+    type: string
+    description: The recognized language

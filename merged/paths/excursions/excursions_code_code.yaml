@@ -1,0 +1,40 @@
+get:
+  tags:
+    - excursion
+  security:
+   - basicAuth: []
+  description: |
+    Returns an `Excursion` object for the given code and optionally for the given dates.
+  responses:
+    200:
+      description: Successful response
+      schema:
+        $ref: '#/definitions/Excursion'
+    403:
+      description: Unauthorised response
+      schema:
+        type: string
+        description: Not Authourised to access this endpoint or resource.
+  parameters:
+    - name: Accept-Language
+      description: 'Locale'
+      in: header
+      type: string
+    - name: code
+      in: path
+      description: 'unique code for the excursion'
+      required: true
+      type: number
+      format: integer
+    - name: startdate
+      in: query
+      description: 'start date'
+      required: false
+      type: string
+      format: date
+    - name: enddate
+      in: query
+      description: 'end date'
+      required: false
+      type: string
+      format: date

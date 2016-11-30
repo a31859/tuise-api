@@ -1,0 +1,19 @@
+type: object
+properties:
+  incident_id:
+    type: string
+    description: Unique identifier representing a specific traffic incident for a given latitude & longitude
+  type:
+    type: integer
+    description: The type of incident ( construction, car crash, ... )
+  description:
+    type: string
+    description: Description of traffic incident.
+  severity:
+    type: integer
+    description: Display name of product.
+  location:
+    $ref: '#/definitions/LocationCoords'
+  detour:
+    type: string
+    description: Detour information.
